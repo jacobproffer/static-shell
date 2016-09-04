@@ -95,6 +95,38 @@
 	}
 }
 
+/**
+* Make flexbox grids super easy!
+* ---
+* @param $cols — Number of columns
+* @param $margin — Margin with unit
+*/
+
+@mixin flexgrid($cols, $margin) {
+  $width: (100% / $cols);
+  $calc-margin: (($margin * $cols) - $margin) / $cols;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &:after {
+    content: "";
+    flex: auto;
+  }
+  > * {
+    width: calc( #{$width} - #{$calc-margin} );
+    margin: 0 $margin / 2;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-child(#{$cols}n) {
+      margin-right: 0;
+    }
+    &:nth-child(#{$cols}n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+
 
 
 // VERTICAL ALIGN
@@ -182,24 +214,21 @@
 
 // Breakpoint
 
-@mixin bp($point) {
-  @if $point == desktopLarge {
-    @media (min-width: 1260px) { @content; }
+@mixin screen-above($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
   }
-  @else if $point == desktopMed {
-  	@media (min-width: 1080px) { @content; }
+}
+
+@mixin screen-below($screen-size) {
+  @media screen and (max-width: ($screen-size - 1px)) {
+    @content;
   }
-  @else if $point == desktopSmall {
-  	@media (min-width: 960px) { @content; }
-  }
-	@else if $point == big-bear {
-		@media (min-width: 800px) { @content; }
-	}
-  @else if $point == tabletSmall {
-  	@media (min-width: 670px) { @content; }
-  }
-  @else if $point == baby-bear {
-    @media (min-width: 600px)  { @content; }
+}
+
+@mixin screen-between($min-screen-size, $max-screen-size) {
+  @media screen and (min-width: $min-screen-size) and (max-width: ($max-screen-size - 1px)) {
+    @content;
   }
 }
 
