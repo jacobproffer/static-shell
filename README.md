@@ -1,2 +1,2 @@
-# website-shell-v2
+# Basic Shell
 Updated website shell with PHP, Sass, &amp; Gulp
