@@ -2,4 +2,3 @@
 *.log
 node_modules
 gulp/node_modules
-assets/css
