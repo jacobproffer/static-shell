@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     maps = require('gulp-sourcemaps'),
+    cleanCSS = require('gulp-clean-css'),
      del = require('del');
 
 gulp.task("concatScripts", function() {
@@ -36,7 +37,15 @@ gulp.task('compileSass', function() {
 
 gulp.task('watchSass', function() {
   gulp.watch('assets/scss/**/*.scss', ['compileSass']);
-})
+});
+
+gulp.task('minify-css', function() {
+  return gulp.src('assets/css/*.css')
+		.pipe(maps.init())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+		.pipe(maps.write('./'))
+    .pipe(gulp.dest('assets/css'));
+});
 
 gulp.task('clean', function() {
   del(['dist', 'assets/css/project-main.css*', 'assets/js/app*.js*']);
