@@ -1,2 +1,2 @@
 # Basic Shell
-Updated website shell with PHP, Sass, &amp; Gulp
+Updated website shell with Sass &amp; Gulp
