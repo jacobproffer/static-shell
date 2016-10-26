@@ -1,6 +1,24 @@
-// MIXINS
+/* Box Model
+  ========================================================================== */
 
-// CSS3 MANIPULATION
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+/* Usage */
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+
+
+/* CSS3 Manipulation
+  ========================================================================== */
 
 @mixin size($width, $height: $width) {
 	width: $width;
@@ -73,7 +91,8 @@
 
 
 
-// ABSOLUTE POSITIONING
+/* Absolute Positioning
+  ========================================================================== */
 
 @mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
 	top: $top;
@@ -85,7 +104,8 @@
 
 
 
-//GRID
+/* Grid
+  ========================================================================== */
 
 @mixin clearfix {
 	&:after {
@@ -129,7 +149,8 @@
 
 
 
-// VERTICAL ALIGN
+/* Vertical-align
+  ========================================================================== */
 
 @mixin vertical-align {
 	position: absolute;
@@ -144,7 +165,8 @@
 
 
 
-// TRANSITIONS & ANIMATION
+/* Transitions & Animation
+  ========================================================================== */
 
 @mixin ease($property:all, $speed:0.3s, $timing: $easeOutQuint) {
 	-webkit-transition: $property $speed $timing;
@@ -212,7 +234,8 @@
 
 
 
-// Breakpoint
+/* Breakpoints
+  ========================================================================== */
 
 @mixin screen-above($screen-size) {
   @media screen and (min-width: $screen-size) {
@@ -232,7 +255,10 @@
   }
 }
 
-// Typography
+
+
+/* Typography
+  ========================================================================== */
 
 @mixin font-size($fs-map) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
