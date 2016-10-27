@@ -22,3 +22,19 @@ Simply clone the git repository or download the zip file and then run **npm inst
 Run the following command in the project root directory:
 
     npm install
+
+# Useful Gulp Commands
+
+There are a number of gulp tasks ready to use after the dependencies have been installed.
+
+## Watch Sass
+
+    gulp watchSass
+
+## Minify CSS
+
+    gulp minify-css
+
+## Minify JS
+
+    gulp minifyScripts
