@@ -33,7 +33,7 @@ There are a number of gulp tasks ready to use after the dependencies have been i
 
 ## Minify CSS
 
-    gulp minify-css
+    gulp minifyCSS
 
 ## Minify JS
 
