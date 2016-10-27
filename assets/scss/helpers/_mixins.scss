@@ -86,6 +86,11 @@
   background-size: cover;
 }
 
+@mixin blur-text($amount: 3px, $color: rgba(0, 0, 0, 0.5)) {
+	color: transparent;
+	text-shadow: 0 0 $amount $color;
+}
+
 
 
 /* Absolute Positioning
