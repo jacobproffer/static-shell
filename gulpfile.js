@@ -39,7 +39,7 @@ gulp.task('watchSass', function() {
   gulp.watch('assets/scss/**/*.scss', ['compileSass']);
 });
 
-gulp.task('minify-css', function() {
+gulp.task('minifyCSS', function() {
   return gulp.src('assets/css/*.css')
 		.pipe(maps.init())
     .pipe(cleanCSS({compatibility: 'ie8'}))
