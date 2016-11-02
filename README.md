@@ -23,18 +23,9 @@ Run the following command in the project root directory:
 
     npm install
 
-# Gulp Tasks
+## Run Gulp
 
 There are a number of gulp tasks ready to use after the dependencies have been installed.
 
-## Watch Sass
-
-    gulp watchSass
-
-## Minify CSS
-
-    gulp minifyCSS
-
-## Minify JS
-
-    gulp minifyScripts
+## Run the default task
+    gulp
