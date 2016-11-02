@@ -23,9 +23,6 @@ Run the following command in the project root directory:
 
     npm install
 
-## Run Gulp
+## Run the default Gulp task
 
-There are a number of gulp tasks ready to use after the dependencies have been installed.
-
-## Run the default task
     gulp
