@@ -7,18 +7,16 @@
 }
 
 .grid-2 {
-  @include screen-above($iPad) {
+  @include screen-above($iPadMini) {
     @include flexgrid(2, 1rem);
 	}
 }
 
 .grid-3 {
-  @include screen-between($iPad, $noteBook13) {
+  @include screen-between($iPadMini, $iPad) {
     @include flexgrid(2, 1rem);
-		// padding-left: 1rem;
-		// padding-right: 1rem;
   }
-  @include screen-above($noteBook13) {
+  @include screen-above($iPad) {
     @include flexgrid(3, 1rem);
 	}
 }

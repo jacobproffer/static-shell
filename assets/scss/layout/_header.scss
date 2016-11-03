@@ -40,19 +40,19 @@
 		}
 		&:nth-last-child(3) {
 			margin-left: 0;
-			@include screen-above(768px) {
+			@include screen-above($iPadMini) {
 				margin-left: 20px;
 			}
 		}
 		&:nth-last-child(-n + 3) {
 			border-bottom: none;
 		}
-		@include screen-above(768px) {
+		@include screen-above(iPadMini) {
 			border-bottom: 0;
 			display: inline-block;
 		}
 	}
-	@include screen-above(768px) {
+	@include screen-above($iPadMini) {
 		opacity: 1;
 		background: none;
 		display: block;
@@ -83,7 +83,7 @@
 	-ms-transition: all 0.2s ease-out;
 	-o-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
-	@include screen-above(768px) {
+	@include screen-above(iPadMini) {
 		display: none;
 	}
 	span {
