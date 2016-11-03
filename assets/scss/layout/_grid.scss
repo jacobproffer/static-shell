@@ -5,3 +5,20 @@
 	margin-right: auto;
 	padding: 0 2.5%;
 }
+
+.grid-2 {
+  @include screen-above($iPad) {
+    @include flexgrid(2, 1rem);
+	}
+}
+
+.grid-3 {
+  @include screen-between($iPad, $noteBook13) {
+    @include flexgrid(2, 1rem);
+		// padding-left: 1rem;
+		// padding-right: 1rem;
+  }
+  @include screen-above($noteBook13) {
+    @include flexgrid(3, 1rem);
+	}
+}
