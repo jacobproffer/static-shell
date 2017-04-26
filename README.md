@@ -1,6 +1,6 @@
 # Basic Shell
 
-Updated website shell that uses Sass &amp; Gulp. Please make sure that you have Ruby, Sass, Gulp, and Node installed on your system before utilizing the basic shell.
+Updated website shell that uses Babel, Sass &amp; Gulp.
 
 ## Required Installs
 
@@ -11,7 +11,7 @@ Updated website shell that uses Sass &amp; Gulp. Please make sure that you have 
 
 # How to Use
 
-Simply clone the git repository or download the zip file and then run **npm install** in the project root directory to install the required dependencies for Gulp.
+Clone the git repository or download the zip file and then run **npm install** in the project root directory to install the required dependencies for Gulp.
 
 ## Clone Project
 
