@@ -5,6 +5,7 @@ var gulp        = require('gulp'),
     cssmin      = require('gulp-cssmin'),
     rename      = require('gulp-rename'),
     prefix      = require('gulp-autoprefixer'),
+    babel       = require('gulp-babel'),
     uglify      = require('gulp-uglify'),
     concat      = require('gulp-concat'),
     imagemin    = require('gulp-imagemin'),
@@ -37,6 +38,9 @@ gulp.task('sass', function () {
 // Configure JS.
 gulp.task('js', function() {
   return gulp.src('assets/js/**/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(rename({suffix: '.min'}))
