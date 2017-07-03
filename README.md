@@ -26,7 +26,3 @@ Run the following command in the project root directory:
 ## Run the default Gulp task
 
     gulp
-
-### To-Do
-
-- [ ] Test Babel workflow
