@@ -12,6 +12,14 @@ hamburger.click(function() {
 	body.toggleClass('disable-scrolling');
 });
 
+$('a[href*="#"]').click(function() {
+	mainNavigation.removeClass('nav-open');
+	mainHeader.removeClass('open');
+	hamburger.removeClass('navOpen');
+	body.removeClass('body-modal-open');
+	body.removeClass('disable-scrolling');
+});
+
 mainHeader.headroom({
   offset    : headerHeight,
   tolerance   : { up:10, down:10 },
