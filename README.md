@@ -1,6 +1,6 @@
 # Basic Shell
 
-Updated website shell that uses Babel, Sass &amp; Gulp.
+Website shell that uses Sass &amp; Gulp.
 
 ## Required Installs
 
