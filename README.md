@@ -11,7 +11,7 @@ Updated website shell that uses Babel, Sass &amp; Gulp.
 
 # How to Use
 
-Clone the git repository or download the zip file and then run **npm install** in the project root directory to install the required dependencies for Gulp.
+Clone the git repository or download the zip file and then run **npm install** in the gulp folder to install the required dependencies for Gulp.
 
 ## Clone Project
 
