@@ -1,8 +1,8 @@
-const body = $('html, body');
-const hamburger = $('.hamburger');
-const mainNavigation = $('.main-nav');
-const mainHeader = $('.main-header');
-const headerHeight = mainHeader.outerHeight();
+var body = $('html, body');
+var hamburger = $('.hamburger');
+var mainNavigation = $('.main-nav');
+var mainHeader = $('.main-header');
+var headerHeight = mainHeader.outerHeight();
 
 hamburger.click(function() {
 	mainNavigation.toggleClass('nav-open');
