@@ -15,7 +15,7 @@ Clone the git repository or download the zip file and then run **npm install** i
 
 ## Clone Project
 
-    git clone https://github.com/jacobproffer/basic-shell.git
+    git clone https://github.com/jacobproffer/static-shell.git
 
 ## Install
 
