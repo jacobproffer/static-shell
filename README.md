@@ -1,6 +1,6 @@
-# Basic Shell
+# Static Shell
 
-Website shell that uses Sass &amp; Gulp.
+Static website shell that uses Sass &amp; Gulp.
 
 ## Required Installs
 
