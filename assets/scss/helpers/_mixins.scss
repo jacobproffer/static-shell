@@ -7,14 +7,6 @@
           box-sizing: $box-model;
 }
 
-/* Usage */
-
-*,
-*:after,
-*:before {
-  @include box-sizing(border-box);
-}
-
 
 
 /* CSS3 Manipulation
@@ -29,14 +21,6 @@
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-@mixin bw() {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
 }
 
 @mixin transform($args) {
@@ -241,9 +225,4 @@
       }
     }
   }
-}
-
-@mixin line-height($heightValue: 12 ){
-    line-height: $heightValue + px; //fallback for old browsers
-    line-height: (0.125 * $heightValue) + rem;
 }
