@@ -40,7 +40,6 @@
 }
 
 @mixin gradient-horizontal($fromColor:#0090cd, $toColor:#dd5cf1) {
-
 	background: $fromColor; // Old browsers
 	background: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%); // FF3.6+
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
@@ -49,11 +48,9 @@
 	background: -ms-linear-gradient(left, $fromColor 0%,$toColor 100%); // IE10+
 	background: linear-gradient(to right, $fromColor 0%,$toColor 100%); // W3C
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=1 ); // IE6-9
-
 }
 
 @mixin gradient-vertical($fromColor:#0090cd, $toColor:#dd5cf1) {
-
 	background: $fromColor; // Old browsers
 	background: -moz-linear-gradient(top, $fromColor 0%, $toColor 100%); // FF3.6+
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$fromColor), color-stop(100%,$toColor)); // Chrome,Safari4+
@@ -62,17 +59,11 @@
 	background: -ms-linear-gradient(top, $fromColor 0%,$toColor 100%); // IE10+
 	background: linear-gradient(to bottom, $fromColor 0%,$toColor 100%); // W3C
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$fromColor}', endColorstr='#{$toColor}',GradientType=0 ); // IE6-9
-
 }
 
 @mixin background-cover($url) {
   background: url($url) no-repeat center center fixed;
   background-size: cover;
-}
-
-@mixin blur-text($amount: 3px, $color: rgba(0, 0, 0, 0.5)) {
-	color: transparent;
-	text-shadow: 0 0 $amount $color;
 }
 
 
@@ -178,12 +169,6 @@
 	-ms-animation-delay: $delay;
 	-o-animation-delay: $delay;
 	animation-delay: $delay;
-}
-
-@mixin appearanceNone {
-
-	@include css3-prefix(appearance, none)
-
 }
 
 
