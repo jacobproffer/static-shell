@@ -1,13 +1,13 @@
 // Variables
 var body = $('html, body'),
-		hamburger = $('.hamburger'),
+		mobileMenu = $('.mobile-nav-button'),
 		mainNavigation = $('.main-nav'),
 		mainHeader = $('.main-header'),
 		links = $('a[href*="#"]'),
 		headerHeight = mainHeader.outerHeight();
 
 // Mobile menu function
-hamburger.click(function() {
+mobileMenu.click(function() {
 	mainNavigation.toggleClass('nav-open');
 	$(this).toggleClass('navOpen');
 	mainHeader.toggleClass('open');
@@ -22,7 +22,7 @@ hamburger.click(function() {
 links.click(function() {
 	mainNavigation.removeClass('nav-open');
 	mainHeader.removeClass('open');
-	hamburger.removeClass('navOpen');
+	mobileMenu.removeClass('navOpen');
 	body.removeClass('body-modal-open');
 	body.removeClass('disable-scrolling');
 });
