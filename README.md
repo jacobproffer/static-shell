@@ -1,6 +1,6 @@
 # Static Shell
 
-Static website shell that uses Sass &amp; Gulp.
+Static website shell that uses Sass &amp; Gulp. As of now, all HTML, CSS and JS files are minified.
 
 ## Required Installs
 
