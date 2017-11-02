@@ -11,7 +11,7 @@ Static website shell that uses Sass &amp; Gulp. As of now, all HTML, CSS and JS 
 
 # How to Use
 
-Clone the git repository or download the zip file and then run **npm install** in the root directory to install the required dependencies for Gulp.
+Clone the git repository or download the zip file and then run **npm install** in the **gulp** directory to install the required dependencies for Gulp.
 
 ## Clone Project
 
