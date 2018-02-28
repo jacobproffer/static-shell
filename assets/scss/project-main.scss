@@ -4,19 +4,15 @@
 @import "helpers/maps";
 @import "helpers/mixins";
 
-// Base
+// General
 
-@import "base/reset";
-@import "base/typography";
-@import "base/general";
-@import "base/classes";
+@import "general/typography";
+@import "general/global";
+@import "general/classes";
+@import "general/reset";
 
-// Layout
+// Components
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
-
-// Pages
-
-@import "pages/home";
+@import "components/grid";
+@import "components/header";
+@import "components/footer";
