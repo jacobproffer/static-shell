@@ -1,12 +1,12 @@
 # Static Shell
 
-Static website shell that uses Sass &amp; Gulp. As of now, all HTML, CSS and JS files are minified.
+Static website shell that uses Sass &amp; Gulp 4. As of now, all HTML, CSS and JS files are minified.
 
 ## Required Installs
 
 + [Ruby](https://www.ruby-lang.org/en/)
 + [Sass](http://sass-lang.com/)
-+ [Gulp](http://gulpjs.com/)
++ [Gulp 4](http://gulpjs.com/)
 + [Node](https://nodejs.org/en/)
 
 # How to Use
