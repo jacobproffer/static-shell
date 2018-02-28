@@ -2,6 +2,7 @@
 
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
+    sourcemaps  = require('gulp-sourcemaps'),
     cssmin      = require('gulp-cssmin'),
     rename      = require('gulp-rename'),
     prefix      = require('gulp-autoprefixer'),
@@ -16,20 +17,6 @@ var scripts = [
   '../assets/js/app.js'
 ];
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['html', 'sass', 'js'], function() {
-
-    browserSync.init({
-        server: '../dist/',
-        browser: "google chrome"
-    });
-
-    gulp.watch('../*.html', ['html']);
-    gulp.watch('../assets/scss/**/*.scss', ['sass']);
-    gulp.watch('../assets/js/**/*.js', ['js']);
-    gulp.watch('../*.html').on('change', browserSync.reload);
-});
-
 gulp.task('html', function() {
   return gulp.src('../*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -39,10 +26,12 @@ gulp.task('html', function() {
 // Configure CSS tasks.
 gulp.task('sass', function () {
   return gulp.src('../assets/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write('.', {sourceRoot:'../assets/scss',includeContent: false}))
     .pipe(gulp.dest('../dist/css'))
     .pipe(browserSync.stream());
 });
@@ -57,4 +46,20 @@ gulp.task('js', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['html', 'sass', 'js', 'serve']);
+// Static Server + watching scss/html files
+gulp.task('browser-sync', function(done) {
+  browserSync.init({
+    server: '../dist/',
+    browser: "google chrome"
+  });
+  done();
+});
+
+gulp.task('default', gulp.series(gulp.parallel('html', 'sass', 'js'), 'browser-sync',
+  function watcher(done) {
+    gulp.watch('../*.html', gulp.parallel('html'));
+    gulp.watch('../assets/scss/**/*.scss', gulp.parallel('sass'));
+    gulp.watch('../assets/js/**/*.js', gulp.parallel('js'));
+    gulp.watch('../*.html').on('change', browserSync.reload);
+  }
+));
