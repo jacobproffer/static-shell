@@ -3,7 +3,6 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     sourcemaps  = require('gulp-sourcemaps'),
-    cssmin      = require('gulp-cssmin'),
     rename      = require('gulp-rename'),
     prefix      = require('gulp-autoprefixer'),
     uglify      = require('gulp-uglify'),
@@ -27,11 +26,10 @@ gulp.task('html', function() {
 gulp.task('sass', function () {
   return gulp.src('../assets/scss/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
-    .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('.', {sourceRoot:'../assets/scss',includeContent: false}))
+    .pipe(sourcemaps.write('.', {sourceRoot:'../../assets/scss',includeContent: false}))
     .pipe(gulp.dest('../dist/css'))
     .pipe(browserSync.stream());
 });
