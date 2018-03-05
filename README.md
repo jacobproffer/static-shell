@@ -19,20 +19,20 @@ This repository contains a static website shell that utlizes Gulp for a task run
 + [Gulp 4](http://gulpjs.com/)
 + [Node](https://nodejs.org/en/)
 
-# How to Use
+## How to Use
 
 Clone the git repository or download the zip file and then run **npm install** in the **gulp** directory to install the required dependencies for Gulp.
 
-## Clone Project
+### Clone Project
 
     git clone https://github.com/jacobproffer/static-shell.git
 
-## Install
+### Install
 
 Run the following command in the project root directory:
 
     npm install
 
-## Run the default Gulp task
+### Run the default Gulp task
 
     gulp
