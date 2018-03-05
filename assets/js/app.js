@@ -9,7 +9,7 @@ var body = $('html, body'),
 // Mobile menu function
 mobileMenu.click(function() {
 	mainNavigation.toggleClass('nav-open');
-	$(this).toggleClass('navOpen');
+	$(this).toggleClass('nav-open');
 	mainHeader.toggleClass('open');
 	body.toggleClass('body-modal-open');
 	body.toggleClass('disable-scrolling');
@@ -22,7 +22,7 @@ mobileMenu.click(function() {
 links.click(function() {
 	mainNavigation.removeClass('nav-open');
 	mainHeader.removeClass('open');
-	mobileMenu.removeClass('navOpen');
+	mobileMenu.removeClass('nav-open');
 	body.removeClass('body-modal-open');
 	body.removeClass('disable-scrolling');
 });

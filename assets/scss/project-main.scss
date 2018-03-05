@@ -1,17 +1,17 @@
 // Helpers
 
-@import "helpers/variables";
-@import "helpers/maps";
-@import "helpers/mixins";
+@import 'helpers/variables';
+@import 'helpers/maps';
+@import 'helpers/mixins';
 
 // General
 
-@import "general/typography";
-@import "general/global";
-@import "general/classes";
-@import "general/reset";
+@import 'general/typography';
+@import 'general/global';
+@import 'general/classes';
+@import 'general/reset';
 
 // Components
 
-@import "components/header";
-@import "components/footer";
+@import 'components/header';
+@import 'components/footer';

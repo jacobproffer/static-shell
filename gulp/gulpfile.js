@@ -2,6 +2,7 @@
 
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
+    sassLint    = require('gulp-sass-lint'),
     sourcemaps  = require('gulp-sourcemaps'),
     rename      = require('gulp-rename'),
     prefix      = require('gulp-autoprefixer'),
@@ -22,8 +23,18 @@ gulp.task('html', function() {
     .pipe(gulp.dest('../dist'));
 });
 
+// Linter
+gulp.task('sass-lint', function() {
+  return gulp.src('../assets/scss/**/*.scss')
+  .pipe(sassLint({
+    configFile: '.scss-lint-config.yml'
+  }))
+  .pipe(sassLint.format())
+  .pipe(sassLint.failOnError())
+});
+
 // Configure CSS tasks.
-gulp.task('sass', function () {
+gulp.task('sass', gulp.series('sass-lint'), function () {
   return gulp.src('../assets/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
