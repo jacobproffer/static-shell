@@ -16,8 +16,8 @@ This repository contains a static website shell that utlizes Gulp for a task run
 
 + [Ruby](https://www.ruby-lang.org/en/)
 + [Sass](http://sass-lang.com/)
-+ [Gulp 4](http://gulpjs.com/)
-+ [Node](https://nodejs.org/en/)
++ [Gulp](https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/)
++ [Node (v9.6.1) & NPM (v5.6.0)](https://nodejs.org/en/)
 
 ## How to Use
 
