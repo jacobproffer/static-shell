@@ -1,6 +1,15 @@
 # Static Shell
 
-Static website shell that uses Sass &amp; Gulp 4. As of now, all HTML, CSS and JS files are minified. Sass source maps are also included.
+This repository contains a static website shell that utlizes Gulp for a task runner. All tasks have recently been updated to Gulp 4 syntax.
+
+## Default Gulp Task
+
++ Browser sync reloads the page automatically when a change is saved
++ All HTML, CSS and JS files are minified on save, outputted to a distribution folder
++ Sass files are linted on save, checking for best practices and errors
++ Sass files are compiled to a minified CSS file after passing the linter task
++ Sass source maps are written and updated on save
++ JavaScript files are minified and concatenated on save to a minified JavaScript file
 
 ## Required Installs
 
