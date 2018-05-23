@@ -17,6 +17,28 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+//IMAGE RATIO :BEFORE ELEMENT WITH ABSOLUTE POSITIONING 3/4 RATIO
+// Constrain a box to a given aspect ratio
+@mixin ratio($width: 1, $height: 1) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content,
+  > .inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 @mixin transform($args) {
   transform: #{$args};
 }
@@ -40,7 +62,7 @@
 
 // Absolute positioning
 
-@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
   top: $top;
   right: $right;
   bottom: $bottom;
@@ -52,7 +74,7 @@
 
 @mixin clearfix {
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -73,7 +95,7 @@
 
 // Transitions
 
-@mixin ease($property: all, $speed: .3s, $timing: $ease-out-quint) {
+@mixin ease($property: all, $speed: 0.3s, $timing: $ease-out-quint) {
   transition: $property $speed $timing;
 }
 

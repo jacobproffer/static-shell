@@ -1,18 +1,18 @@
 // Variables
-var body = $('html, body');
-var mobileMenu = $('.mobile-nav-button');
-var mainNavigation = $('.main-nav');
-var mainHeader = $('.main-header');
+var body = $("html, body");
+var mobileMenu = $(".mobile-nav-button");
+var mainNavigation = $(".main-nav");
+var mainHeader = $(".main-header");
 var links = $('a[href*="#"]');
 var headerHeight = mainHeader.outerHeight();
 
 // Mobile menu function
 mobileMenu.click(function() {
-  mainNavigation.toggleClass('nav-open');
-  $(this).toggleClass('nav-open');
-  mainHeader.toggleClass('open');
-  body.toggleClass('body-modal-open');
-  body.toggleClass('disable-scrolling');
+  mainNavigation.toggleClass("nav-open");
+  $(this).toggleClass("nav-open");
+  mainHeader.toggleClass("open");
+  body.toggleClass("body-modal-open");
+  body.toggleClass("disable-scrolling");
 });
 
 /*
@@ -20,11 +20,11 @@ mobileMenu.click(function() {
 	 the mobile menu that is on the same page
 */
 links.click(function() {
-  mainNavigation.removeClass('nav-open');
-  mainHeader.removeClass('open');
-  mobileMenu.removeClass('nav-open');
-  body.removeClass('body-modal-open');
-  body.removeClass('disable-scrolling');
+  mainNavigation.removeClass("nav-open");
+  mainHeader.removeClass("open");
+  mobileMenu.removeClass("nav-open");
+  body.removeClass("body-modal-open");
+  body.removeClass("disable-scrolling");
 });
 
 /*
@@ -35,7 +35,7 @@ document.ontouchmove = function(event) {
   var isTouchMoveAllowed = true,
     target = event.target;
   while (target !== null) {
-    if (target.classList && target.classList.contains('disable-scrolling')) {
+    if (target.classList && target.classList.contains("disable-scrolling")) {
       isTouchMoveAllowed = false;
       break;
     }

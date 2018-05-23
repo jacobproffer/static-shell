@@ -1,12 +1,31 @@
+@import "superior";
+
 .container {
-	width: 90%;
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 5%;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5%;
 }
 
 .body-modal-open {
   overflow: hidden;
   width: 100%;
+}
+
+.example {
+  padding: 150px 0;
+}
+
+.cols {
+  @include cols;
+}
+
+.col {
+  @include make-flex(4);
+}
+
+.box {
+  @include ratio(16, 9);
+  background-color: $white;
 }
